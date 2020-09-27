@@ -21,6 +21,7 @@ Code should run with no issues using Python versions 3.*. The following are the 
 - sklearn
 - seaborn
 - xgboost
+- datetime
 
 ## Project Motivation<a name="motivation"></a>
 
@@ -30,7 +31,7 @@ I have always found promotional offers by businesses to be interesting. Therefor
 
 The project uses simulated data of Starbucks customers behavior on the Starbucks rewards app. Starbucks customers sometimes receive an offer or two for its products. The dataset is a simplified version of the actual data. It only contains offers related to a single product instead of many. The users might receive more than one offer or no offer at all.
 
-The Capstone Challenge Project builds a successful machine learning model which predicts whether customers of a certain demographic will most likely complete an offer. The project seeks to help Starbucks on which demographic of customers are most likely to complete its offers. We will explore the following demographics and then choose the one that is mostly suitable for the Machine learning model. They are:
+The Capstone Challenge Project builds a successful machine learning model which predicts whether customers will most likely complete an offer. The project seeks to help Starbucks on which demographic of customers are most likely to complete its offers. We will explore the following demographics and then choose the one that is mostly suitable for the Machine learning model. They are:
 
 - Income level
 - Gender
@@ -83,9 +84,8 @@ amount: (numeric) money spent in "transaction"
 reward: (numeric) money gained from "offer completed"
 time: (numeric) hours after start of test
 
-The full set of files related to this course are owned by Udacity, so they are not publicly available here.  However, you can see pieces of the analysis here.  This README also serves as a template for students to follow in creating their own project README files..  
+The full set of files related to this course are owned by Udacity and can be seen in the Data section of this repo. This README also serves as a template for students to follow in creating their own project README files..  
 
-There is an additional `.py` file that runs the necessary code to obtain the final model used to predict salary.
 There is a jupyter notebook that documents and runs all the code for the project.
 
 ## Results<a name="results"></a>
@@ -94,29 +94,30 @@ The 3 models in the project were all analyzed using the Root Mean Square Error(R
 The RMSE from our 3 models above are:
 - Baseline Model: Train RMSE error: 0.06461127565148764, Test RMSE error: 0.13643719402592924
 - Correlation Tuned Model: 0.06368740514313077, Test RMSE error: 0.15087425084601191
-- GridSearchSv Model: Train RMSE error: 0.05766602233052254, Test RMSE error: 0.10836191475391388
+- GridSearchCV Model: Train RMSE error: 0.05766602233052254, Test RMSE error: 0.10836191475391388
 
-As can be seen from above the GridSearchSv model performed the best as it had the least errors both in the Train and Test sets. In the Correlation Model the training data performed better better than the Baseline model but the test is worse off. This might be explained by overfitting in the Baseline model.
+As can be seen from above the GridSearchCV model performed the best as it had the least errors both in the Train and Test sets. In the Correlation Model the training data performed better better than the Baseline model but the test is worse off. This might be explained by overfitting in the Baseline model.
 
 The 3 most important features for event offer completion in the model are:
 - reward_x
 - channel_email
 - discount
 
-The technical description  of the code can be found at the post available [here](https://medium.com/@josh_2774/how-do-you-become-a-developer-5ef1c1c68711).
+The technical description  of the code can be found at the post available [here](https://medium.com/@yasirwaziri/what-makes-starbucks-offers-successful-a00221c0febe?source=friends_link&sk=1282c3b9e6487e681630ad77538c93e4).
 
 ## References<a name="references"></a>
-https://www.kaggle.com/questions-and-answers/115480
-https://towardsdatascience.com/fine-tuning-xgboost-in-python-like-a-boss-b4543ed8b1e
-https://machinelearningmastery.com/avoid-overfitting-by-early-stopping-with-xgboost-in-python/
-https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error/#:~:text=Root%20Mean%20Square%20Error%20(RMSE)%20is%20the%20standard%20deviation%20of,the%20line%20of%20best%20fit.
-https://stackoverflow.com/questions/34029865/how-to-plot-bar-chart-for-a-list-in-python
-https://www.marketing-schools.org/types-of-marketing/promotional-marketing.html
-https://yoast.com/psychology-discounts/
-
+- [Kaggle](https://www.kaggle.com/questions-and-answers/115480)
+- [Fine Tuning xgboost](https://towardsdatascience.com/fine-tuning-xgboost-in-python-like-a-boss-b4543ed8b1e)
+- [Early Stopping](https://machinelearningmastery.com/avoid-overfitting-by-early-stopping-with-xgboost-in-python/)
+- [RMSE Analysis](https://www.statisticshowto.com/probability-and-statistics/regression-analysis/rmse-root-mean-square-error)
+- [Print Bar from list](https://stackoverflow.com/questions/34029865/how-to-plot-bar-chart-for-a-list-in-python)
+- [Promotional marketing](https://www.marketing-schools.org/types-of-marketing/promotional-marketing.html)
+- [Discounts](https://yoast.com/psychology-discounts/)
+- [Praboas Capstone challenge](https://medium.com/@prabowoas1002/starbucks-capstone-challenge-16f4234d447b)
+- [Aproano challenge](https://github.com/aproano2/starbucks/blob/master/Starbucks_Capstone_notebook.ipynb)
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
-Must give credit to Starbucks and Udacity for the data.  You can find the Licensing for the data and other descriptive information at the Kaggle link available [here](https://www.kaggle.com/stackoverflow/so-survey-2017/data).  Otherwise, feel free to use the code here as you would like!
+Must give credit to Starbucks and Udacity for the data.   Feel free to use the code here as you would like!
 
 Author: Yasir Waziri
