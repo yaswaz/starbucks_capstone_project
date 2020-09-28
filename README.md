@@ -90,13 +90,17 @@ There is a jupyter notebook that documents and runs all the code for the project
 
 ## Results<a name="results"></a>
 
-The 3 models in the project were all analyzed using the Root Mean Square Error(RMSE). It is the standard deviation of the residuals (prediction errors). Residuals are a measure of how far from the regression line data points are; RMSE is a measure of how spread out these residuals are. In other words, it tells you how concentrated the data is around the line of best fit.
-The RMSE from our 3 models above are:
+The models in the project were all analyzed using the Root Mean Square Error(RMSE) and cross validation. RMSE is the standard deviation of the residuals (prediction errors). Residuals are a measure of how far from the regression line data points are; RMSE is a measure of how spread out these residuals are. In other words, it tells you how concentrated the data is around the line of best fit.
+The RMSE from sour models above are:
 - Baseline Model: Train RMSE error: 0.06461127565148764, Test RMSE error: 0.13643719402592924
-- Correlation Tuned Model: 0.06368740514313077, Test RMSE error: 0.15087425084601191
-- GridSearchCV Model: Train RMSE error: 0.05766602233052254, Test RMSE error: 0.10836191475391388
+- xbg Regressor model performance:- Train RMSE error: 0.05210123211145401, Test RMSE error: 0.12047526985406876
+- Random Forest Model: 0.06368740514313077, Test RMSE error: 0.15087425084601191
+- Decision Tree model performance:- Train RMSE error: 0.0, Test RMSE error: 0.21780048291891418
+- GridSearchSv Tuned Model: Train RMSE error: 0.05766602233052254, Test RMSE error: 0.10836191475391388
 
-As can be seen from above the GridSearchCV model performed the best as it had the least errors both in the Train and Test sets. In the Correlation Model the training data performed better better than the Baseline model but the test is worse off. This might be explained by overfitting in the Baseline model.
+Cross-validation is a technique for evaluating ML models by training several ML models on subsets of the available input data and evaluating them on the complementary subset of the data. The best cross validation score was from xgbRegressor at 0.142
+
+As can be seen from above the GridSearchCV model performed the best as it had the least errors both in the Train and Test sets and cross validation. In the Correlation Model the training data performed better better than the Baseline model but the test is worse off. This might be explained by overfitting in the Baseline model.
 
 The 3 most important features for event offer completion in the model are:
 - reward_x
@@ -115,6 +119,7 @@ The technical description  of the code can be found at the post available [here]
 - [Discounts](https://yoast.com/psychology-discounts/)
 - [Praboas Capstone challenge](https://medium.com/@prabowoas1002/starbucks-capstone-challenge-16f4234d447b)
 - [Aproano challenge](https://github.com/aproano2/starbucks/blob/master/Starbucks_Capstone_notebook.ipynb)
+- [Cross Validation Explained](https://towardsdatascience.com/cross-validation-explained-evaluating-estimator-performance-e51e5430ff85)
 
 ## Licensing, Authors, Acknowledgements<a name="licensing"></a>
 
